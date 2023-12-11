@@ -1,0 +1,1360 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: backdrop-filter 0.3s;
+  background-color: rgba(150, 5, 5, 0.97);
+  backdrop-filter: blur(1200px);
+}
+
+.header-blurred {
+  backdrop-filter: blur(1200px);
+}
+/*     position: relative;
+    text-align: right;
+    background-color: rgb(95, 14, 14);
+    margin: 0;
+    padding: 2px 5px;
+    transition: opacity 0.5s ease, max-height 0.5s ease; 
+    max-height: 50px; 
+    overflow: hidden; 
+    padding: 2px 1%;
+    justify-content: space-between;
+    Add transition for opacity and max-height for a smooth collapse effect */
+.header-top {
+    position: relative;
+    text-align: right;
+    background-color: rgb(95, 14, 14);
+    margin: 0;
+    padding: 2px 5px;
+    transition: opacity 0.5s ease, max-height 0.5s ease; 
+    max-height: 50px; 
+    overflow: hidden; 
+    padding: 2px 1%;
+    justify-content: space-between;
+  }
+  
+  /* This class will control the visibility of the header-top */
+  .hidden {
+    opacity: 0;
+    max-height: 0; 
+    padding: 0 5px; 
+  }
+  
+  /* The rest of your CSS for phone numbers and clickable elements remains the same */
+  .header-top .phone-numbers,
+  .header-top .clickable {
+    margin-right: 20px;
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    font-size: 1em;
+  }
+  
+  .header-top .clickable:hover {
+    background-color: #0c00b4;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+  
+.header-middle {
+  display: flex;
+  padding: 10px;
+  margin-left: 105px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), /* slightly spread shadow */
+  0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+
+.logo img{
+  height: 40px;
+}
+
+
+
+
+/**/
+
+.dropdown.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content.nav-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.dropdown-content.nav-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+
+.dropdown-content.nav-content a:hover {
+  background-color: #3470be;
+}
+
+.dropdown.nav-dropdown:hover .dropdown-content.nav-content {
+  display: block;
+}
+
+/**/
+
+.menu-btn,
+.account-btn,
+.login-btn {
+  background-color: #1900fa;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  margin: 5px;
+  font-size: 18px;
+}
+
+/* Styling for hover effect */
+.menu-btn:hover,
+.account-btn:hover,
+.login-btn:hover {
+  background-color: #0f007a;
+}
+
+/*testiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+
+.search-results-box {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Adjust this value based on the height of your search input */
+    left: 510px;
+    right: 0;
+    background-color: #fff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1500; /* Makes sure the dropdown appears on top */
+    max-height: 300px;
+    max-width: 500px;
+    overflow-y: auto; /* Makes the dropdown scrollable */
+    margin-top: 2px;
+  }
+
+.product-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  background-color: rgb(194, 194, 194);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+  max-width: 490px;
+}
+
+.product-image {
+  margin-right: 10px;
+  width: 50px;
+  border-radius: 12px;
+}
+
+.product-image img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-info {
+  flex-grow: 1;
+}
+
+.product-price {
+  font-weight: bold;
+}
+
+
+
+.chevron {
+  margin-left: 10px;
+  color: #999;
+}
+
+
+/*testiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii*/
+
+.gg-search {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+}
+
+.gg-search::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 12px;
+}
+
+.menu-search {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+/*was search-wrapper-search-container*/
+.search-wrapper {
+  position: relative;
+  flex-direction: column;
+  margin-right: 230px;
+  z-index: 2000;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  background-color: rgb(255, 255, 255);
+  padding-right: 30px;
+  width: 400px;
+  height: 35px;
+}
+
+.search-icon-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-icon-button:focus {
+  outline: none;
+}
+
+.search-icon-button .gg-search,
+.search-icon-button .gg-search::after {
+  color: rgb(43, 9, 9);
+}
+
+.transition-btn {
+  background-color: rgb(150, 5, 5);
+  padding: 10px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border: none;
+  color: #070066;
+  width: 200px;
+}
+
+.transition-btn:hover {
+  background-color: #070066;
+  color: rgb(150, 5, 5);
+}
+
+.menu-btn:hover,
+.account-btn:hover,
+.login-btn:hover {
+  background-color: #070066;
+}
+.account-icons {
+  display: flex;
+  margin-right: 0;
+}
+
+/*gg-home*/
+
+.gg-home {
+  background: linear-gradient(to left, currentColor 5px, transparent 0)
+      no-repeat 0 bottom/4px 2px,
+    linear-gradient(to left, currentColor 5px, transparent 0) no-repeat right
+      bottom/4px 2px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs, 1));
+  width: 18px;
+  height: 14px;
+  border: 2px solid;
+  border-top: 0;
+  border-bottom: 0;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: -2px;
+  margin-right: 5px;
+}
+
+.gg-home::after,
+.gg-home::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.gg-home::before {
+  border-top: 2px solid;
+  border-left: 2px solid;
+  border-top-left-radius: 4px;
+  transform: rotate(45deg);
+  top: -5px;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  left: 0;
+}
+
+.gg-home::after {
+  width: 8px;
+  height: 10px;
+  border: 2px solid;
+  border-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: 0;
+  left: 3px;
+  bottom: 0;
+}
+
+/*gg-home-end*/
+/*gg-apple-watch start*/
+.gg-apple-watch {
+  background: linear-gradient(to left, currentColor 5px, transparent 0)
+    no-repeat 13px 4px/2px 4px;
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 5px solid transparent;
+  transform: scale(var(--ggs, 1));
+  border-radius: 9px;
+  box-shadow: inset 0 0 0 2px;
+}
+
+.gg-apple-watch::after,
+.gg-apple-watch::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 10px;
+  height: 5px;
+  border: 2px solid;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  left: 2px;
+}
+
+.gg-apple-watch::after {
+  top: -3px;
+}
+
+.gg-apple-watch::before {
+  transform: scaleY(-1);
+  top: 12px;
+}
+/*gg-apple-watch end*/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f7f7f7;
+  padding: 10px;
+}
+
+nav a {
+  color: rgb(150, 5, 5);
+  text-decoration: none;
+  padding: 5px 15px;
+  border: 1px solid rgb(150, 5, 5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: rgb(150, 5, 5);
+  color: #fff;
+}
+
+/*idont know*/
+nav a[href*="ბრენდები"]::before {
+  content: "";
+  display: inline-block;
+  margin-right: 50px;
+  background: linear-gradient(to left, currentColor 5px, transparent 0)
+    no-repeat 4px 11.5px/2px 2px;
+  box-sizing: border-box;
+  position: relative;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 20px;
+  border: 2px solid rgb(150, 5, 5);
+  border-radius: 2px;
+  vertical-align: middle;
+} /*idont know*/
+
+nav a:hover .gg-smartphone {
+  background: linear-gradient(to left, white 5px, transparent 0) no-repeat 4px
+    11.5px/2px 2px;
+  border-color: white;
+}
+
+.gg-smartphone {
+  display: inline-block;
+  margin-right: 5px;
+  background: linear-gradient(to left, rgb(150, 5, 5) 5px, transparent 0)
+    no-repeat 4px 11.5px/2px 2px;
+  box-sizing: border-box;
+  transform: scale(var(--ggs, 1));
+  width: 14px;
+  height: 20px;
+  border: 2px solid rgb(150, 5, 5);
+  border-radius: 2px;
+}
+
+button {
+  background-color: rgb(150, 5, 5);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+#cookie-notification {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  display: none;
+}
+
+.products-container-0{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  padding-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin: 5px 40px 50px 40px;
+}
+
+.phone-card {
+  width: 20%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  margin: 22px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.phone-image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.phone-card {
+  width: 220px;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.phone-info {
+  display: block;
+}
+
+.discount-badge {
+  background-color: orange;
+  padding: 2px 6px;
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.discount-badge-instead {
+  margin-top: 34px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 5px;
+}
+
+.current-price {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.original-price {
+  text-decoration: line-through;
+  text-decoration-color: rgb(150, 5, 5);
+  color: #888;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.phone-name {
+  font-size: 12px;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.transition-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: rgb(150, 5, 5);
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.phone-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  background-color: #24364b;
+  padding: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -2px rgba(0, 0, 0, 0.06);
+}
+
+.footer-section {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  padding: 0 20px;
+}
+
+.footer-section h3 {
+  border-bottom: 1px solid rgb(153, 151, 151);
+  padding-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section li {
+  padding: 5px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.footer-section li:hover {
+  color: rgb(150, 5, 5);
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.footer-bottom img {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 50px;
+  bottom: 25px; /* Aligns the dropdown to the top edge of the button */
+  background-color: white;
+  min-width: 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+/* To ensure the dropdown is placed above the button, you can use a negative value for top */
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.language-selector:hover .dropdown-content {
+  display: block;
+}
+
+/*For the sliding effect */
+.product-display {
+  text-align: left;
+  width: 40%;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 118px;
+}
+.product-display h3 {
+  text-decoration: underline;
+  text-decoration-color: gray;
+}
+
+
+
+
+.product-info-display{
+  text-align: left;
+  width: 40%;
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 118px;
+}
+
+
+
+
+
+.image-section {
+  position: relative;
+  display: inline-block;
+}
+
+.main-concret-image {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+  opacity: 1;
+}
+
+.outgoing {
+  transform: translateX(0);
+}
+
+/*dont work*/
+.arrow {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.right-arrow {
+  background-image: url("path-to-your-arrow-image.png");
+}
+
+.left-arrow {
+  background-image: url("path-to-your-arrow-image.png");
+  transform: scaleX(-1);
+}
+
+/**/
+.product-description {
+  float: left;
+  margin-left: 650px;
+  width: 35%;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(63, 63, 63, 0.1);
+  background-color: #fff;
+  margin-top: -400px;
+}
+
+.product-description h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.spec-section {
+  margin-bottom: 20px;
+}
+
+.spec-section strong {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.spec-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.spec-section li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.color-options .label {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/**/
+.colors {
+  display: inline-block;
+  vertical-align: middle;
+}
+.colors a{
+    text-decoration: none;
+}
+
+
+.color {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 2px solid rgb(94, 91, 91);
+  transition: border-color 0.3s;
+}
+
+.color.active {
+  border-color: rgb(150, 5, 5);
+}
+
+.color:hover {
+  cursor: pointer;
+  border-color: rgb(150, 5, 5);
+}
+
+.storage-options .label {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.storages {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.storage {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
+}
+
+.storage.active {
+  background-color: rgb(150, 5, 5);
+  color: #fff;
+}
+
+.storage:hover {
+  border-color: rgb(150, 5, 5);
+}
+
+.container {
+  font-family: "Arial", sans-serif;
+  max-width: 4px;
+  margin: 0 auto;
+  float: right;
+  width: 50%;
+  margin-top: -150px;
+  margin-right: 155px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 10px;
+}
+
+.current-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 25px;
+  color: rgb(150, 5, 5);
+}
+.previous-price {
+  font-size: 20px;
+  text-decoration: line-through;
+  opacity: 0.7;
+  text-decoration-color: rgb(150, 5, 5);
+  margin-right: 220px;
+}
+
+.options .option {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.options input[type="radio"] {
+  margin-right: 10px;
+}
+
+.buy-button {
+  display: block;
+  width: 300px;
+  padding: 10px;
+  background-color: rgb(150, 5, 5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/*
+.action-buttons button {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+
+.action-buttons .wishlist {
+    background-color: rgb(150, 5, 5);
+    color: #fff;
+}*/
+
+.phone-details {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-left: 100px;
+  padding-bottom: 50px;
+  margin-bottom: 1000px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.detail-title {
+  font-weight: bold;
+}
+
+.detail-value {
+  text-align: right;
+  color: rgb(109, 68, 68);
+}
+
+/*view more*/
+
+.view-more-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid rgb(150, 5, 5);
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  outline: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.additional-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+/* Style for screens larger than 800px */
+@media (min-width: 801px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* Style for screens smaller than or equal to 800px */
+@media (max-width: 800px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/*სქროლი გვერდზე*/
+
+.carousel-container {
+  width: 200px;
+  height: 400px;
+  overflow: hidden;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  margin-right: 15px;
+  border-left: 5px solid rgb(150, 5, 5);
+  border-right: 5px solid rgb(150, 5, 5);
+  margin-top: -1725px;
+}
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-slide img {
+  width: 70%;
+  margin-bottom: 10px;
+  border: 2px solid rgb(194, 192, 192);
+  box-sizing: border-box;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-button {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  align-items: center;
+}
+
+.carousel-button svg {
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+}
+.carousel-slide {
+  background-color: #eee;
+  width: 200px;
+  height: 600px;
+  border: 1px black;
+  overflow-y: scroll;
+}
+.carousel-slide::-webkit-scrollbar {
+  display: none;
+}
+.carousel-slide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.image-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.image-info a {
+  text-decoration: none;
+  color: rgb(88, 8, 8);
+}
+
+.image-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.image-info span {
+  color: rgb(150, 5, 5);
+}
+
+.button-up {
+  top: -20px;
+  color: gray;
+}
+
+.button-down {
+  bottom: -20px;
+  color: gray;
+}
+/*სქროლი გვერდზებ*/
+
+/*საჩუქრები*/
+.container-gifts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-left: 420px;
+  margin-top: -1200px;
+}
+.gift-item {
+  padding: 20px;
+  width: 140px;
+  height: 140px;
+  border: 2px solid rgb(150, 5, 5);
+  text-align: center;
+  margin: 10px;
+  box-sizing: border-box;
+  box-shadow: 3px 3px 3px 3px black;
+}
+
+.gift-item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+/*საჩუქრები*/
+
+/*slide show*/
+
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+
+
+
+      
+      
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.sidebar {
+  flex: 0 0 250px;
+  width: 250px; /* Set a fixed width for the sidebar */
+  height: 395px; /* Height can be automatic to contain all items */
+  background-color: #f4f4f4;
+  padding: 20px; /* Padding inside the sidebar */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px 25px 20px 90px; /* Margin outside the sidebar */
+}
+
+.sidebar h2 {
+  text-align: center;
+  color: rgb(59, 39, 39);
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.menu-item {
+  width: 250px; /* Subtract the left and right padding from the sidebar width */
+  height: 50px; /* Height to fit content */
+  position: absolute; /* Needed for absolute positioning of child elements */
+  display: flex;
+  align-items: center;
+  padding: 10px; /* Padding inside each menu item */
+  border-radius: 5px; /* Rounded corners for menu item */
+  transition: background-color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 25px 0 25px 0;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.menu-item-info {
+  display: none;
+  position: absolute;
+  left: 100%; /* Align to the right side of menu-item */
+  top: 50%; /* Align vertically */
+  transform: translateY(-50%); /* Center vertically */
+  white-space: nowrap; /* Keep the tooltip in one line */
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  /* Optional: to prevent the box from being too wide */
+  max-width: 300px; 
+} 
+.info{
+ display: none;
+ background-color: black;
+}          
+
+.menu-item:hover, .menu-item-info{
+  background-color: #ddd;
+  display: block;
+
+}
+.menu-item svg {
+  width: 24px;
+  margin-right: 10px;
+  fill: #333;
+}
+.menu-item span {
+  color: #333;
+}
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.dots-slideshow {
+  text-align: center;
+  padding-bottom: 90px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0px 3px 3px 0px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+
+
+
+
+.main-container {
+    position: relative; 
+    padding-right: 20px; 
+    box-sizing: border-box;
+}
+
+.content-wrapper {
+    width: auto; 
+}
+
+
+.brends {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center; 
+    margin: 60px 20px 20px 30px;
+}
+
+
+.brends div {
+    width: 250px;
+    height: 62px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    padding: 4px 0; /* Top and bottom padding */
+    box-shadow: 0 0 5px rgba(39, 39, 39, 0.3), /* Primary shadow */
+                0 0 10px rgba(44, 44, 44, 0.2);
+    border-radius: 12px;
+    display: flex; /* Establishes a flex container */
+    align-items: center; /* Vertically centers the flex items */
+    justify-content: center; /* Horizontally centers the text */
+}
+
+.brends a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 20px;
+    width: 100%; 
+    justify-content: flex-start;
+}
+
+.brand-logo {
+    height: 50px;
+    width: 55px; 
+}
+
+
+
+.brends a span {
+    text-align: center;
+    flex-grow: 1; /* Allows the text span to grow and occupy the remaining space */
+    display: block; /* Converts the span to a block element within the flex container */
+}

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobiX</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo/IMG_4318-removebg-preview.png"> <!--gasaketebeli-->
+    <link rel="stylesheet" href="styles.css">
+    <script src="scriptForProducts.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="scriptindex1html.js"></script>
+    
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-top">
+            <a href="#" class="we clickable"> ჩვენ შესახებ </a>
+            <a href="#" class="support clickable">დახმარება </a>
+            <a href="#" class="installment clickable"> განვადება </a>
+            <span class="phone-numbers">📞 +995 558 59 88 81</span>
+        </div>
+        <div class="header-middle">
+            <div class="logo">  
+                <a href="http://127.0.0.1:5501/index.html">
+                <img src="images/logo/MobiX-l-removebg-preview.png" alt="Logo"  height="40px"/> 
+                </a>
+            </div>
+
+
+            <div class="menu-search">
+                
+               <div class="dropdown  nav-dropdown">
+                    <button class="menu-btn"> ნავიგაცია</button>
+                    <div class="dropdown-content  nav-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                        <a href="#">Link 4</a>
+                        <!-- Add more links as needed -->
+                    </div>
+                </div>
+                
+                <div class="search-wrapper">
+                    <input type="text" class="search-input" onkeyup="filterSearch()" placeholder="ძებნა">
+                    <button class="search-icon-button">
+                      <div class="gg-search"></div>
+                    </button>
+                  </div>
+                  <div class="search-results-box">
+                    <div id="search-results">
+                      <!-- Search results will be inserted here -->
+                    </div>
+                  </div>
+                  
+                
+                    
+                    
+            
+            
+
+           <div class="account-icons">
+    <button class="account-btn">კალათა</button>
+    <button class="login-btn">შესვლა</button>
+</div>
+
+        </div>
+    </header>
+    
+    <nav>
+        <a href="http://127.0.0.1:5501/index.html"><span class="gg-home" ></span>მთავარი</a>
+        <a href="#"><span class="gg-smartphone" > </span>ბრენდები</a>
+        <a href="http://127.0.0.1:5500/accessories.html"><span class="gg-apple-watch"></span>აქსესუარები</a>
+    </nav>
+    
+
+
+
+
+
+    <div class="product-info-display" id="productInfo">
+        <!-- Product Title -->
+        <h3 id="product-title">Product Title</h3>
+
+        <div class="image-section" id="image-section">
+            <!-- Main image -->
+            <img id="main-image" src="" alt="Main Image" class="main-concret-image active">
+            
+            <!-- Thumbnails will be inserted here -->
+            <div class="thumbnails" id="thumbnails"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="product-description">
+
+    <!-- Color Options Section -->
+    <div class="spec-section color-section">
+        <strong>ფერი:</strong>
+        <div class="colors">
+            <a href="index1.1.html">
+                <span class="color" style="background-color: #54544e"></span>
+            </a>
+            <a href="index2.html">
+                <span class="color" style="background-color: #F3F4F7;"></span>
+            </a>
+            <a href="#color3-link">
+                <span class="color" style="background-color: rgb(91, 121, 142);"></span>
+            </a>
+            <a href="index1.html">
+                <span class="color active" style="background-color: #878681; border: 2px solid rgb(150, 5, 5);"></span>
+            </a>
+        </div>
+    </div>
+    
+
+    <!-- Storage Options Section -->
+    <div class="spec-section storage-section">
+        <strong>მეხსიერება:</strong>
+        <div class="storages">
+            <span class="storage active" data-price="3799">128 GB</span>
+            <span class="storage" data-price="4299">256 GB</span>
+            <span class="storage" data-price="4799">512 GB</span>
+            <span class="storage" data-price="5299">1TB</span>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Price Display Section -->
+        <div class="price-section">
+            <span class="current-price">3799₾</span>
+            <span class="previous-price">3899₾</span>
+        </div>
+    </div>
+    
+    
+
+    
+
+    <!-- Buy Button -->
+    <button class="buy-button">ყიდვა</button>
+
+    <!-- Compare and Wishlist Buttons 
+    <div class="action-buttons">
+        <button class="compare">შედარება</button>
+        <button class="wishlist">სურვილების სია</button>
+    </div>-->
+</div>
+
+<div class="phone-details details-container">
+    <h2>Apple iphone 15 Pro</h2>
+
+    <div class="detail-item">
+        <span class="detail-title">Color Options:</span>
+        <span class="detail-value">Blue Titanium</span>
+    </div>
+    
+    <div class="detail-item">
+        <span class="detail-title">Bluetooth Specifications:</span>
+        <span class="detail-value">5.3, A2DP, LE</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+    <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+        <div class="detail-item">
+        <span class="detail-title">Ports:</span>
+        <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+    </div>
+    <div class="additional-content">
+        <div class="detail-item">
+            <span class="detail-title">Ports:</span>
+            <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+         </div>
+            <div class="detail-item">
+                <span class="detail-title">Ports:</span>
+                <span class="detail-value">USB Type-C 3.0, DisplayPort</span>
+         </div>
+      </div>
+    <button class="view-more-btn"> view more</button>
+    
+</div>
+<!--
+<div class="content">
+    Sample Phone
+    <div id="expandableContent" class="dropdown-info-content">
+        <br>
+        Color Options: Blue Titanium<br>
+        Bluetooth Specifications: 5.3, A2DP, LE<br>
+        Ports: USB Type-C 3.0, DisplayPort<br>
+    </div>
+    <button class="dropd-infobtn" onclick="toggleContent()">View more ▼</button>
+</div>
+
+-->
+
+
+
+<div class="carousel-container">
+    <!-- Button for scrolling up -->
+    <button class="carousel-button button-up" onclick="scroll(-200)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+  
+    <!-- Carousel slides -->
+    <div class="carousel-slide" id="carousel">
+      <div class="image-info">
+          <a href="index2.html">
+          <img src="images/samsung galaxy s23 ultra green/samsung-galaxy-s23-ultragri.webp" alt="Image 1">
+          <p>Samsung Galaxy S23 Ultra Green<br><span>$999</span></p>
+          </a>
+      </div>
+      <div class="image-info">
+          <a href="index1.html">
+          <img src="images/iphone 15 pro natural titanium/iphone 15 proti.webp" alt="Image 2">
+          <p>iPhone 15 Pro Natural Titanium<br><span>$1099</span></p>
+          </a>
+      </div>
+      <div class="image-info">
+          <a href="index1.html">
+          <img src="images/iphone 15 pro natural titanium/iphone 15 proti.webp" alt="Image 2">
+          <p>iPhone 15 Pro Natural Titanium<br><span>$1099</span></p>
+          </a>
+      </div>
+      <div class="image-info">
+          <a href="index1.html">
+          <img src="images/iphone 15 pro natural titanium/iphone 15 proti.webp" alt="Image 2">
+          <p>iPhone 15 Pro Natural Titanium<br><span>$1099</span></p>
+          </a>
+      </div>
+      <div class="image-info">
+          <a href="index1.html">
+          <img src="images/iphone 15 pro natural titanium/iphone 15 proti.webp" alt="Image 2">
+          <p>iPhone 15 Pro Natural Titanium<br><span>$1099</span></p>
+          </a>
+      </div>
+      <!-- Repeat for other images... -->
+  </div>
+  
+  
+    <!-- Button for scrolling down -->
+    <button class="carousel-button button-down" onclick="scroll(200)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+  <!--საჩუქრები-->
+  <body>
+    <div class="container-gifts">
+      <h1>Gifts</h1>
+      <div class="gift-item" id="product">
+        <img src="images/cases/0188449_apple-silicone-case-with-magsafe-for-iphone-14-mpt03-elderberry_550.webp" alt="Apple Product">
+      </div>
+      <div class="gift-item" id="charger">
+        <img src="images/yursasmenebi/0090619_hoco-universal-earphone-m3-white_550.webp" alt="charger">
+      </div>
+      <div class="gift-item" id="earpods">
+        <img src="images/chargers/0191368_hoco-innovative-single-port-pd20w-charger-n27-eu-white_550.webp" alt="EarPods">
+      </div>
+    </div>
+
+
+
+
+
+</body>
+<footer>
+    <div class="footer-section">
+        <h3   data-lang-en="Navigation" data-lang-ka="ნავიგაცია">ნავიგაცია</h3>
+        <ul>
+            <li data-lang-en="about us" data-lang-ka="ჩვენ შესახებ">ჩვენ შესახებ</li>
+            <li data-lang-en="Terms and Conditions" data-lang-ka="წესები და პირობები">წესები და პირობები</li>
+            <li data-lang-en="Corporate Sales" data-lang-ka="კორპორატიული გაყიდვები">კორპორატიული გაყიდვები</li>
+            <li data-lang-en="Delivery service" data-lang-ka="მიწოდების სერვისი">მიწოდების სერვისი</li>
+        </ul>
+    </div>
+
+    <!-- Add more footer-section divs as needed... -->
+
+    <div class="footer-bottom">
+        <p>&copy; 2023 MobiX.ge. All rights reserved.</p>
+    </div>
+
+    <div class="language-selector">
+        <button id="languageButton"><img src="images/language-logo/iStock-1379267234.jpg" width="30px"></button>
+        <div id="languageDropdown" class="dropdown-content">
+            <a href="indexEnglish.html" data-lang="en"><img src="images/language-logo/images.jpeg" width="30px"></a><!--დროშები ჩავსვა ქართულის და ინგლისურის მაგივრად-->
+            <a href="index.html" data-lang="ka"><img src="images/language-logo/iStock-1379267234.jpg" width="30px"></a>
+        </div>
+    </div>
+    
+</footer>
+</html>
